@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		task1\output.txt = task1\output.txt
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "task2", "task2\task2.vcxproj", "{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -26,6 +28,14 @@ Global
 		{EB1315E1-4D43-4D71-A0C4-62C514AF5C30}.Release|x64.Build.0 = Release|x64
 		{EB1315E1-4D43-4D71-A0C4-62C514AF5C30}.Release|x86.ActiveCfg = Release|Win32
 		{EB1315E1-4D43-4D71-A0C4-62C514AF5C30}.Release|x86.Build.0 = Release|Win32
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Debug|x64.ActiveCfg = Debug|x64
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Debug|x64.Build.0 = Debug|x64
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Debug|x86.Build.0 = Debug|Win32
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Release|x64.ActiveCfg = Release|x64
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Release|x64.Build.0 = Release|x64
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Release|x86.ActiveCfg = Release|Win32
+		{E1FAC4FD-87B5-422B-90DB-4801E2A3023E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
