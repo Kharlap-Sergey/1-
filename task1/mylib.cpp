@@ -26,7 +26,7 @@ void separateText(char* text, SeparatedText* sent) {
 	int boofc = 0;
 	bool IsSentenseStarted = false;
 	for (int i = 0; text[i] != '\0'; i++) {
-		if (text[i] == '/' or text[i] == '\n') continue;
+		if (text[i] == '/') continue;
 
 		if (isEndSign(text[i]) && !isEndSign(text[i+1]) && boofc != 0) {
 			boof[boofc] = text[i];
@@ -42,7 +42,8 @@ void separateText(char* text, SeparatedText* sent) {
 
 		IsSentenseStarted = isAlpha(text[i]) || IsSentenseStarted;
 		if (IsSentenseStarted) {
-			boof[boofc] = text[i];
+			if (text[i] == '\n') boof[boofc] = ' ';
+			else boof[boofc] = text[i];
 			boofc++;
 		}
 	}
@@ -101,4 +102,8 @@ void print(const char* OUT, char* text, double averageComplexity, Sentences* sen
 	void print(const char* OUT, char* text, double averageComplexity, Sentences * sentenceWithMaxComplexity);	
 	out << "предложение с максимальной сложностью:\n" << sentenceWithMaxComplexity->value << " ---- " << sentenceWithMaxComplexity->complexity;
 	out.close();
+}
+
+void setrus() {
+	setlocale(LC_ALL, "rus");
 }

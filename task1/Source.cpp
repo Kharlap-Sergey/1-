@@ -1,5 +1,3 @@
-#include <iostream>
-#include <fstream>
 #include "mylib.h"
 
 using namespace std;
@@ -10,7 +8,7 @@ SeparatedText sent;
 
 
 int main() {
-	setlocale(LC_ALL, "rus");
+	setrus();
 	text = read(IN);
 	separateText(text, &sent);
 	analyseSentenses(&sent);
