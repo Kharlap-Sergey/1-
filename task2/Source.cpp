@@ -1,8 +1,7 @@
-#include "matrix.h"
-int main() {
+#include "menu.h"
 
-	Matrix* matrix = read("input.txt");
-	Element* maxelem = findMaxSpecificelement(matrix);
-	print("output.txt", matrix, maxelem);
+int main() {
+	setrus();
+	callMenu();
 	return 0;
 }

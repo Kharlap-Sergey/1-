@@ -1,21 +1,7 @@
-#include "mylib.h"
-
-using namespace std;
-
-char* text;
-
-SeparatedText sent;
-
+#include "menu.h"
 
 int main() {
 	setrus();
-	text = read(IN);
-	separateText(text, &sent);
-	analyseSentenses(&sent);
-	
-	double averageComplexity = calculateAverageComplexity(&sent);
-	Sentences* sentenceWithMaxComplexity = findSentenceWithMaxComplexity(&sent);
-
-	print(OUT, text, averageComplexity, sentenceWithMaxComplexity);
+	callMenu();
 	return 0;
 }

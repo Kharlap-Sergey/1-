@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="mylib.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <Text Include="input.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="menu.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="variabels.h" />
   </ItemGroup>

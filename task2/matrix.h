@@ -1,4 +1,5 @@
 #include <fstream>
+#include <iostream>
 using namespace std;
 
 struct Matrix {
@@ -12,5 +13,5 @@ struct Element {
 };
 
 Matrix* read(const char* filename); // функция, читабщая матрицу из файла.
-void print(const char* filename, Matrix* matr, Element* elem); // функция, выводящая ответ.
+void print(const char* filename, bool f, Matrix* matr, Element* elem);// функция, выводящая ответ.{
 Element* findMaxSpecificelement(Matrix* matr); // функция, находящая максимальный элемент среди всех упопрядоченных рядов.

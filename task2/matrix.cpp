@@ -18,10 +18,27 @@ Matrix* read(const char* filename) {
 	return matr;
 }
 
+
+void print(const char* filename, bool f, Matrix* matr, Element* elem) {
+	fstream out;
+	out.open(filename);
+	out << matr->n << ' ';
+	out << matr->m << endl;;
+	for (int i = 0; i < matr->n; i++) {
+		for (int j = 0; j < matr->m; j++) {
+			out << *(matr->values + i * matr->m + j) << ' ';
+		}
+		out << endl;
+	}
+	if(f) out << "max element - " << elem->value << "\nid " << elem->n << ' ' << elem->m << endl;
+	out << '/';
+	out.close();
+}
+
 bool isRowIncrease(Matrix* matr, int rwoNumber, int rowLength) {
 	bool ans = true;
 	for (int i = 0; i < rowLength - 1; i++) {
-		if (*(matr->values + rwoNumber * rowLength + i) > *(matr->values + rwoNumber * rowLength + i + 1)) {
+		if (*(matr->values + rwoNumber * rowLength + i) > * (matr->values + rwoNumber * rowLength + i + 1)) {
 			ans = false;
 			break;
 		}
@@ -41,21 +58,6 @@ bool isRowDecrease(Matrix* matr, int rwoNumber, int rowLength) {
 }
 bool isRowOdered(Matrix* matr, int rwoNumber, int rowLength) {
 	return isRowDecrease(matr, rwoNumber, rowLength) || isRowIncrease(matr, rwoNumber, rowLength);
-}
-
-void print(const char* filename, Matrix* matr, Element* elem) {
-	fstream out;
-	out.open(filename);
-	out << matr->n << ' ';
-	out << matr->m << endl;;
-	for (int i = 0; i < matr->n; i++) {
-		for (int j = 0; j < matr->m; j++) {
-			out << *(matr->values + i * matr->m + j) << ' ';
-		}
-		out << endl;
-	}
-	out << "max element - " << elem->value << "\nid " << elem->n << ' ' << elem->m << endl;
-	out.close();
 }
 
 Element* findMaxSpecificelement(Matrix* matr) {
@@ -81,3 +83,4 @@ Element* findMaxSpecificelement(Matrix* matr) {
 	}
 	return element;
 }
+

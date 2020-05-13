@@ -1,5 +1,3 @@
-#include <iostream>
-#include <fstream>
 #include "mylib.h"
 
 using namespace std;
@@ -94,16 +92,20 @@ Sentences* findSentenceWithMaxComplexity(SeparatedText* sep) {
 
 	return ans;
 }
-void print(const char* OUT, char* text, double averageComplexity, Sentences* sentenceWithMaxComplexity){
-	out.open(OUT);
 
+void print(const char* OUT, char* text,bool f, double averageComplexity, Sentences* sentenceWithMaxComplexity) {
+	out.open(OUT);
 	out << text << endl;
-	out << "средняя сложность текста - " << averageComplexity << endl;
-	void print(const char* OUT, char* text, double averageComplexity, Sentences * sentenceWithMaxComplexity);	
-	out << "предложение с максимальной сложностью:\n" << sentenceWithMaxComplexity->value << " ---- " << sentenceWithMaxComplexity->complexity;
+	if (f) {
+		out << "средняя сложность текста - " << averageComplexity << endl;
+		void print(const char* OUT, char* text, double averageComplexity, Sentences * sentenceWithMaxComplexity);
+		out << "предложение с максимальной сложностью:\n" << sentenceWithMaxComplexity->value << " ---- " << sentenceWithMaxComplexity->complexity;
+	}
+	out << '/';
 	out.close();
 }
 
 void setrus() {
+	system("chcp 1251");
 	setlocale(LC_ALL, "rus");
 }
